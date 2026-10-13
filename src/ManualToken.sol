@@ -21,6 +21,9 @@ function name() public pure returns (string memory){
     return "Manual Token";
 }
 
+// alternative of above function is
+ // string public name = "Manual Token";
+
 function decimals() public pure returns(uint8){
     return 18;
 }
@@ -38,6 +41,9 @@ return s_balances[_owner];
 
 }
 
+function transfer(address _to, uint256 _value) public returns (bool success){
+    
+}
 
 
 }
