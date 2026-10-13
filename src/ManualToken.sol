@@ -42,7 +42,10 @@ return s_balances[_owner];
 }
 
 function transfer(address _to, uint256 _value) public returns (bool success){
-    
+    uint256 previousBalance = balanceOf(msg.sender) + balanceOf(_to);
+    balanceOf[_from] -= _value;
+  balanceOf[_to] += _value;
+  require(balanceOf[_from] + balanceOf[_to])
 }
 
 
