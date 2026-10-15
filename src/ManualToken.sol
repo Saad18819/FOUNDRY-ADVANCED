@@ -56,6 +56,7 @@ return s_balances[_owner];
 }
 
 /*
+
 Returns the token balance associated with _owner.
 this functon is marked view coz we are reading from s_balances
 
