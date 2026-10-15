@@ -49,11 +49,19 @@ Specifies the total token amount in existence ($100 \times 10^{18}$ base units).
 
  */
 
-function balanceOf(address _owner) public pure returns (uint256){
+function balanceOf(address _owner) public view returns (uint256){
 
 return s_balances[_owner];
 
 }
+
+/*
+Returns the token balance associated with _owner.
+this functon is marked view coz we are reading from s_balances
+
+
+
+ */
 
 function transfer(address _to, uint256 _value) public returns (bool success){
     uint256 previousBalance = balanceOf(msg.sender) + balanceOf(_to);
