@@ -68,7 +68,7 @@ function transfer(address _to, uint256 _value) public returns (bool success){
     uint256 previousBalance = balanceOf(msg.sender) + balanceOf(_to);
    s_balances[msg.sender] -= _value;
   balanceOf(_to) += _value;
-  require(balanceOf(msg.sender) + balanceOf(_to) == previousBalances);
+  require(balanceOf(msg.sender) + balanceOf(_to) == previousBalance);
 }
 
 
