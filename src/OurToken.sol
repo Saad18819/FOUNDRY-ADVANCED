@@ -28,6 +28,8 @@ LEARNING
 one of the most popular framework out there is OpenZeppelin contracts
 they have ton of contracts which we can copy paste and use
 2.We have imported ERC 20 token alright
+3. the reason we inherit framework from openzepplin or any other erc-20 framework coz we dont want to build erc-20 contract itself we just wanna build something else on top of ERC-20 contract so we use 
+contract logic and then build our project on top of that
 
 
 
