@@ -5,9 +5,9 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract OurToken is ERC20{
 constructor(uint256 initialSupply) ERC20("OurToken","OT"){
-    _mint(msg.sender, initialSupply);
+    _mint(msg.sender, initialSupply); // from erc 20 itself
 }
-// coz ERC20 has a constructor and whenever u inherit constructor u know what to do
+// coz ERC20 has a constructor and whenever u inherit constructor u know u have to add the constructor here itself
 
 }
 
