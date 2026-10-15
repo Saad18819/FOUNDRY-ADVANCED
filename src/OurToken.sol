@@ -20,7 +20,9 @@ STEPS:
 
 
 LEARNING
-okay here we will be using a already deployed,audited erc-20 contract and one of the most popular framework out there is OpenZeppelin contracts
+okay here we will be using a already deployed,audited erc-20 contract and 
+one of the most popular framework out there is OpenZeppelin contracts
+they have ton of contracts which we can copy paste and use
 
 
 
