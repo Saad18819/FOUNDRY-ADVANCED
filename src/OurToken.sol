@@ -8,3 +8,20 @@ constructor(uint256 initialSupply) ERC20("OurToken","OT"){
     _mint(msg.sender, initialSupply);
 }
 }
+
+/*
+
+STEPS:
+
+
+
+
+
+
+
+LEARNING
+
+
+
+
+ */
