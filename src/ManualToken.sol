@@ -33,6 +33,10 @@ Declared as pure because it reads hardcoded data rather than state storage.
 function decimals() public pure returns(uint8){
     return 18;
 }
+/*
+Standard ERC-20 tokens use 18 decimal places (matching Ethereum’s 1 Ether = 10^18 wei denomination).
+
+ */
 
 function totalSupply() public pure returns(uint256){
 
