@@ -44,10 +44,14 @@ return 100 ether; // 100 * 1e18
 
 } 
 
+/*
+Specifies the total token amount in existence ($100 \times 10^{18}$ base units).
+
+ */
+
 function balanceOf(address _owner) public pure returns (uint256){
 
 return s_balances[_owner];
-
 
 }
 
