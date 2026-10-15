@@ -17,6 +17,9 @@ STEPS:
 1. install openzeppelin contracts  "forge install openzepplin/openzeppelin-contracts@version"
 for version just check course ka github repo ka makeFile for the latest version
 2. make sure do write the crct path in remappings
+3.Go to script and write the script file
+4.Also Make the MakeFile and copy paste the MakeFile material from the github repo
+
 
 
 

@@ -21,3 +21,12 @@ vm.stopBroadcast();
 
 }
 }
+
+/*
+STEP FOR DEPLOYMENT
+1. "make anvil"
+2."make deploy"
+
+
+
+ */
