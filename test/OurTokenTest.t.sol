@@ -9,7 +9,9 @@ contract OurTokenTest is Test{
 OurToken pubic tokeyy;
 DeployOurToken public deployer;
 
-address
+address bob = makeAddr("BOB");
+address alice = makeAddr("ALICE");
+
 
 function setUp() public{
     deployer = new DeployOurToken();
