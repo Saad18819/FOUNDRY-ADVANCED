@@ -22,7 +22,7 @@ vm.stopBroadcast();
 
 /*
 STEP FOR DEPLOYMENT
-1. "make anvil"
+1. "make anvil"  do it in the diff terminal
 2."make deploy"
 
 
