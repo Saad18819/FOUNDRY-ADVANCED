@@ -16,10 +16,8 @@ function run() external{
 vm.startBroadcast();
 new OurToken(INITIAL_SUPPLY);
 vm.stopBroadcast();
-
-
-
 }
+
 }
 
 /*
