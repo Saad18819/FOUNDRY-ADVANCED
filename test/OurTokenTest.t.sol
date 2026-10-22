@@ -6,4 +6,17 @@ import {OurToken} from "../src/OurToken.sol";
 
 contract OurTokenTest is Test{
 
+OurToken pubic tokeyy;
+DeployOurToken public deployer;
+
+address
+
+function setUp() public{
+    deployer = new DeployOurToken();
+    tokeyy = deployer.run();
+}
+
+
+
+
 }
