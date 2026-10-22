@@ -12,12 +12,20 @@ DeployOurToken public deployer;
 address bob = makeAddr("BOB");
 address alice = makeAddr("ALICE");
 
+uint256 public constant STARTING_BALANCE = 100 ether;
 
 function setUp() public{
     deployer = new DeployOurToken();
     tokeyy = deployer.run();
+
+vm.prank(address(deployer));
+ourToken.transfer(bob,STARTING_BALANCE);
+
 }
 
+function testBobBalance() public{
+    
+}
 
 
 
