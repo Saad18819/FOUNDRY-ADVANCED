@@ -6,7 +6,7 @@ import {OurToken} from "../src/OurToken.sol";
 
 contract OurTokenTest is Test{
 
-OurToken pubic tokeyy;
+OurToken public tokeyy;
 DeployOurToken public deployer;
 
 address bob = makeAddr("BOB");
@@ -18,13 +18,13 @@ function setUp() public{
     deployer = new DeployOurToken();
     tokeyy = deployer.run();
 
-vm.prank(address(deployer));
-ourToken.transfer(bob,STARTING_BALANCE);
+vm.prank(msg.sender);
+tokeyy.transfer(bob,STARTING_BALANCE);
 
 }
 
 function testBobBalance() public{
-    
+    assertEq(STARTING_BALANCE , tokeyy.balanceOf(bob));
 }
 
 
