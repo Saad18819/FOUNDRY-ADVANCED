@@ -30,7 +30,17 @@ function testBobBalance() public{
 
 function testAllowances() public{
     // transferFrom is used to withdraw workflow allowing contracts to transfer tokens on ur behalf
+    uint256 initialAllowance = 1000;
+
+    // bob approves alice to spend tokens on her behalf
+
 }
 
 
 }
+
+/*
+etherscan has this token approval stuff 
+
+
+ */
