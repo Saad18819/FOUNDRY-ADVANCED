@@ -50,7 +50,9 @@ assertEq(tokeyy.balanceOf(bob), STARTING_BALANCE - transferAmount);
 }
 
 /*
+
 etherscan has this token approval stuff 
+
 
 
  */
