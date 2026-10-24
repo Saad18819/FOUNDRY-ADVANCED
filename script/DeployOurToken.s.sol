@@ -17,6 +17,7 @@ vm.startBroadcast();
 OurToken ot = new OurToken(INITIAL_SUPPLY);
 vm.stopBroadcast();
 return ot;
+
 }
 
 }
