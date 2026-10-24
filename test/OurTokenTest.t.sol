@@ -28,6 +28,9 @@ function testBobBalance() public{
     assertEq(STARTING_BALANCE , tokeyy.balanceOf(bob));
 }
 
+function testAllowances() public{
+    // transferFrom is used to withdraw workflow allowing contracts to transfer tokens on ur behalf
+}
 
 
 }
