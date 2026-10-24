@@ -32,9 +32,15 @@ function testAllowances() public{
     // transferFrom is used to withdraw workflow allowing contracts to transfer tokens on ur behalf
     uint256 initialAllowance = 1000;
 
-    // bob approves alice to spend tokens on her behalf
+    // bob approves alice to spend tokens on his behalf
 
+vm.prank(bob);
+tokeyy.approve(alice,initialAllowance);  // inside oppenzepplin erc-20 has a approve function
 
+uint256 transferAmount = 500;
+
+vm.prank(alice);
+tokeyy.transferFrom(bob,alice,initialAllowance);
 
 
 
