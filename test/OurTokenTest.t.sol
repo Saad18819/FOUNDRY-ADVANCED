@@ -21,8 +21,8 @@ function setUp() public{
     deployer = new DeployOurToken();
     tokeyy = deployer.run();
 
-vm.prank(msg.sender);
-tokeyy.transfer(bob,STARTING_BALANCE);
+vm.prank(msg.sender); // if u have seen inside the constructor the msg.sender is getting the inittial Supply so here msg.sender will get the initial supply
+tokeyy.transfer(bob,STARTING_BALANCE);// msg.sender will transfer the amnt to bob
 
 }
 
