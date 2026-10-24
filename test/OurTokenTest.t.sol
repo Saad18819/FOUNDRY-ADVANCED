@@ -41,6 +41,8 @@ uint256 transferAmount = 500;
 
 vm.prank(alice);
 tokeyy.transferFrom(bob,alice,initialAllowance);
+assertEq(tokeyy.balanceOf(alice), transferAmount);
+assertEq()
 
 
 
