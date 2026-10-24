@@ -40,9 +40,10 @@ tokeyy.approve(alice,initialAllowance);  // inside oppenzepplin erc-20 has a app
 uint256 transferAmount = 500;
 
 vm.prank(alice);
-tokeyy.transferFrom(bob,alice,initialAllowance);
+tokeyy.transferFrom(bob,alice,transferAmount);
 assertEq(tokeyy.balanceOf(alice), transferAmount);
 assertEq(tokeyy.balanceOf(bob), STARTING_BALANCE - transferAmount);
+
 
 
 
