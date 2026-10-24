@@ -69,7 +69,7 @@ function testDirectTransfer() public {
     }
 
 
-function testFailTransferInsufficientBalance() public {
+function testRevertTransferInsufficientBalance() public {
         uint256 excessAmount = STARTING_BALANCE + 1 ether;
 
         vm.prank(bob);
