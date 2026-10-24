@@ -44,9 +44,6 @@ tokeyy.transferFrom(bob,alice,transferAmount);
 assertEq(tokeyy.balanceOf(alice), transferAmount);
 assertEq(tokeyy.balanceOf(bob), STARTING_BALANCE - transferAmount);
 
-
-
-
 }
 
 
