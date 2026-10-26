@@ -44,6 +44,7 @@ function approve(address spender, uint256 amount) public returns (bool)
 
 so basically the owner who called the approve function gives the permission to spender to spend on his behalf and the another amnt paramter is the max she can spend
 and here the amnt is not transfereed to the spender on approval
+so basically whenever alice do a txn then automatically it gets deducted from the bobs account 
 its same coz ERC-20 token contract is essentially just a digital ledger(spreadsheet) stored on the blockchain no physical or digital coins moving around everything in the ledger just updates
 
 
