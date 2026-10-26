@@ -34,6 +34,10 @@ they have ton of contracts which we can copy paste and use
 3. the reason we inherit framework from openzepplin or any other erc-20 framework coz we dont want to build erc-20 contract itself we just wanna build something else on top of ERC-20 contract so we use 
 contract logic and then build our project on top of that
 
-
+why to write _mint inside constructor
+OpenZeppelin's standard ERC20 contract provides the mechanics for minting (_mint), 
+but it leaves the decision of when and how many tokens to create up to you.
+If you don't call _mint inside your constructor, your token starts with a total supply of 0.
+The contract code exists on the blockchain, but no tokens actually exist in anyone's balance!
 
  */
