@@ -57,6 +57,14 @@ assertEq(tokeyy.balanceOf(alice), transferAmount);
 assertEq(tokeyy.balanceOf(bob), STARTING_BALANCE - transferAmount);
 
 }
+/*
+LEARNING
+.transfer() is called by token owner
+.transferFrom() is called by approved sender
+
+ */
+
+
 
 // from here onwards the AI has written the test so we just gonna understand the code
 
