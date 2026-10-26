@@ -9,7 +9,8 @@ contract codeTesting is Test{
 OurToken public tokeyy;
 DeployScript public depoy;
 
-address saad = makeAddr("Saad");
+address saad = makeAddr("SAAD");
+address zid = makeAddr("ZID");
 uint256 Supply = 100 ether;
 
     function setUp() public{
@@ -21,6 +22,17 @@ tokeyy.transfer(saad,Supply);
 }
 
 function testApprove() public{
-    
+uint256 transferAmnt = 50 ether;
+uint256 maxLimit = 100 ether;
+
+vm.prank(saad);
+tokeyy.approve(zid,maxLimit);
+
+vm.prank(zid);
+tokeyy.transferFrom(saad,zid,transferAmnt);
+
+assert(balanceOf(saad) , balanceOf(zid));
 }
+
+
 }
