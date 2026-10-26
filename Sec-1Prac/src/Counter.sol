@@ -21,8 +21,10 @@ contract ManualToken{
 return 100 ether;
    }
 
-function balanceOf(address _owner) public pure returns (uint256 balance){
+function balanceOf(address _owner) public view returns (uint256 balance){
     return balanceSheet[_owner];
 }
+
+
 
 }
