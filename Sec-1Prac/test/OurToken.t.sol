@@ -2,8 +2,9 @@
 pragma solidity ^0.8.19;
 
 import {Test} from "forge-std/test.sol";
-import {OurToken} from "../src/OurToken.t.sol";
+import {OurToken} from "../src/OurToken.sol";
 import {DeployScript} from "../script/ManualTokenScript.s.sol";
+
 
 contract codeTesting is Test{
 OurToken public tokeyy;
@@ -31,7 +32,7 @@ tokeyy.approve(zid,maxLimit);
 vm.prank(zid);
 tokeyy.transferFrom(saad,zid,transferAmnt);
 
-assert(balanceOf(saad) , balanceOf(zid));
+assert(tokeyy.balanceOf(saad) == tokeyy.balanceOf(zid));
 }
 
 
