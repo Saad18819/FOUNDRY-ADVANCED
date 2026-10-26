@@ -9,10 +9,18 @@ contract codeTesting is Test{
 OurToken public tokeyy;
 DeployScript public depoy;
 
+address saad = makeAddr("Saad");
+uint256 Supply = 100 ether;
+
     function setUp() public{
 depoy = new DeployScript();
+tokeyy = depoy.run();
 
+vm.prank(msg.sender);
+tokeyy.transfer(saad,Supply);
+}
 
-
-    }
+function testApprove() public{
+    
+}
 }
