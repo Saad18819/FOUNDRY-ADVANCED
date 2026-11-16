@@ -1,1 +1,43 @@
 What is an NFT?
+
+Fungible (ERC-20 tokens): Like ₹100 notes or regular cryptocurrencies (like USDC or LINK). If you swap your ₹100 note for mine, nothing changes—they are identical and have the exact same value.
+
+Non-Fungible (ERC-721 / NFTs): Like concert tickets with specific seat numbers, or unique Pokémon cards. Even if two people own a Pikachu card, one might be holographic with 100 HP and the other might be a basic card with 40 HP. You can't just swap them 1-for-1 because each one is unique.
+
+
+Right now, NFTs are mostly famous for digital art (which anyone can right-click and save), so people think they're pointless
+
+The real point: Anyone can take a photo of the Mona Lisa, but only one person owns the original. An NFT acts as an unforgeable digital receipt on the blockchain proving who owns the original, and ensuring the creator gets paid/credited.
+
+Beyond art: Because an NFT is just a unique digital ID card, developers use them as VIP event passes, in-game weapons/skins, or official ownership records. Marketplaces like OpenSea are just websites that give you a nice visual interface to view and trade them instead of typing terminal commands.
+
+
+Normal Tokens (ERC-20): The smart contract just keeps a ledger of balances. (e.g., Saad owns 50 tokens).
+
+NFTs (ERC-721): Every single token gets its own serial number called a tokenId. The contract tracks who owns each specific ID. (e.g., Token #1 belongs to Saad, Token #2 belongs to Ali).
+
+
+
+
+Storing an actual image file directly on the Ethereum blockchain costs an insane amount of gas (money).
+
+To save money, the smart contract doesn't hold the picture. Instead, each tokenId has a link attached to it called a tokenURI. This link points to a simple text file (JSON) that describes the NFT:
+
+JSON
+{
+    "name": "Cyber Dragon #1",
+    "description": "A rare fire dragon",
+    "image": "link-to-the-actual-picture",
+    "attributes": ["Fire", "Level 99"]
+}
+
+Where Do We Store That Data? (On-Chain vs. Off-Chain)
+
+Since storing files on Ethereum is expensive, developers have to choose where to keep the image and that JSON text file:
+
+Off-chain (Normal web servers): Cheap and easy, but if the company's server shuts down, your NFT's picture disappears forever (centralized risk).
+
+IPFS (The middle ground): A decentralized file-sharing network. You upload the image to IPFS, put that IPFS link into your JSON file, upload the JSON file to IPFS, and put that final link into your NFT's tokenURI. It's much safer than a normal server, though not 100% permanent unless someone keeps "pinning" (hosting) it.
+
+On-chain (100% on Ethereum): You store the actual code/SVG image and stats directly inside the smart contract. It's expensive to deploy and some marketplaces struggle to read it, but as long as Ethereum exists, your NFT can never disappear.
+
