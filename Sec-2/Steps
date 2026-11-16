@@ -1,0 +1,2 @@
+1. forge init
+2. go to openzepplin contract github (contract<token<ERC721) can refer then erc721.sol for the functionalities on which we gonna build

@@ -41,3 +41,9 @@ IPFS (The middle ground): A decentralized file-sharing network. You upload the i
 
 On-chain (100% on Ethereum): You store the actual code/SVG image and stats directly inside the smart contract. It's expensive to deploy and some marketplaces struggle to read it, but as long as Ethereum exists, your NFT can never disappear.
 
+
+
+ALSOOO
+
+NFT is just really a token standard just like ERC-20 so we gonna aghain import the openzepplin contract for it and start building on top of it
+
