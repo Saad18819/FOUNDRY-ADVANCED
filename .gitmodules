@@ -1,3 +1,6 @@
 [submodule "Sec-1Prac/lib/openzeppelin-contracts"]
 	path = Sec-1Prac/lib/openzeppelin-contracts
 	url = https://github.com/openzeppelin/openzeppelin-contracts
+[submodule "Sec-2/lib/openzeppelin-contracts"]
+	path = Sec-2/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
