@@ -7,7 +7,7 @@ contract OurToken is ERC20{
 constructor(uint256 initialSupply) ERC20("OurToken","OT"){
     _mint(msg.sender, initialSupply); // from erc 20 itself
 }
-// coz ERC20 has a constructor and whenever u inherit constructor u know u have to add the constructor here itself
+// coz ERC20 has a constructor and whenever u inherit  so for the constructor u know u have to add the constructor here itself
 
 }
 
