@@ -17,4 +17,3 @@ function mintNFT() public{
 }
 
 }
-// 5:00
