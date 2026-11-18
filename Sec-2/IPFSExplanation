@@ -1,0 +1,62 @@
+IPFS (InterPlanetary File System) is a peer-to-peer, decentralized protocol for storing and sharing files. 
+In Web3 and NFT development, it solves a major problem: storing large files (like images, videos, or JSON metadata) directly on a blockchain like Ethereum is prohibitively expensive, 
+while storing them on a centralized server (like AWS or Google Drive) creates a single point of failure where the server owner can delete or alter the file.
+
+
+Core Concept: Content Addressing vs. Location Addressing
+The traditional web (HTTP) uses location-based addressing—a URL like [https://example.com/dog.png](https://example.com/dog.png) tells your browser where to look (a specific server). If that server goes offline or the owner swaps dog.png for a picture of a cat, the link breaks or shows different data.
+
+
+
+IPFS uses content-based addressing:
+
+When you upload a file to IPFS, the protocol runs its bytes through a cryptographic hash function (typically SHA-256) to generate a unique fingerprint called a Content Identifier (CID) (e.g., ipfs://QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco).
+
+You ask the network what file you want by its CID rather than where it lives.
+
+Tamper-proof: If even a single pixel in an image or a single letter in a JSON file changes, the cryptographic hash changes completely, producing an entirely new CID. Because a smart contract stores that immutable CID, nobody can silently swap out your NFT's artwork.
+
+
+
+
+How IPFS Works Under the Hood:
+
+IPFS combines several subsystems to store, locate, and transfer data across peers:Chunking & Merkle DAGs: Large files are split into smaller blocks (typically 256 KB each). Each chunk gets its own hash, and those hashes are linked together in a tree-like structure called a Merkle DAG (Directed Acyclic Graph) under IPLD. The root hash of that graph becomes the file's overall CID.Finding Files (Kademlia DHT): Because there is no central directory, IPFS nodes maintain a Distributed Hash Table across the network that maps CIDs to the IP addresses of peers currently holding those blocks.Transferring Data (Bitswap): Once your node finds peers holding the chunks you need, it uses a BitTorrent-like protocol called Bitswap to download pieces simultaneously from multiple peers and verify each chunk against its hash.
+
+
+
+
+
+
+Pinning and Persistence (Crucial Distinction):
+
+
+
+A common misconception is that uploading to IPFS automatically stores your file forever across the entire network.
+
+Garbage Collection: By default, when another IPFS node fetches your file, it caches a copy temporarily. To save disk space, nodes periodically run garbage collection and delete unpinned cached files. If every node holding a file deletes it or goes offline, that CID becomes unreachable.
+
+Pinning: To keep a file permanently available, at least one active node must "pin" it—flagging the CID so garbage collection never deletes it. You can do this by running your own 24/7 IPFS node, using a pinning service (such as Pinata, Filebase, or web3.storage), or using Filecoin (an incentivized storage layer built on top of IPFS where storage providers are paid to keep data pinned).
+
+
+
+
+
+How IPFS Connects to NFTs & Smart Contracts:
+In a typical ERC-721 NFT project (like the one built in Patrick Collins' Foundry course), hosting an NFT takes a two-step IPFS upload:
+
+Upload the Image: You upload pug.png to IPFS and get its image CID (ipfs://QmImageHash...).
+
+Upload the Metadata JSON: You create a JSON file following the ERC-721 metadata standard that embeds that image URI:
+
+{
+  "name": "Pug #1",
+  "description": "An adorable pug stored on IPFS",
+  "image": "ipfs://QmImageHash...",
+  "attributes": [{ "trait_type": "Cuteness", "value": 100 }]
+}
+
+
+Store on-chain: Your Solidity smart contract stores only that lightweight string (ipfs://QmMetadataHash...) and returns it when someone calls tokenURI(tokenId)
+
+

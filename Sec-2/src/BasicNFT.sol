@@ -24,7 +24,7 @@ function tokenURI(uint256 tokenId) public view override returns(string memory){
 // whenever u wanna look how ur nft looks like its this function that they are calling (explore openSEA)
 
 }
-
+// lesson 11 part 4 (IPFS)
 /*
 LEARNINGS
 
