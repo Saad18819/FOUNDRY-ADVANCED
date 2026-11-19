@@ -60,3 +60,12 @@ Upload the Metadata JSON: You create a JSON file following the ERC-721 metadata 
 Store on-chain: Your Solidity smart contract stores only that lightweight string (ipfs://QmMetadataHash...) and returns it when someone calls tokenURI(tokenId)
 
 
+
+
+// MY EXPLANATION
+
+basically it takes ur data and take all ur bunch of data and hash it in a single hash on the ipfs node and u can then pin that data on node..our node is connected to other netwokr of ipfs node and they all talk to each other so if i need data each node will talk to each other and it will point to the node where ur data is
+
+IPFS cant do smart contract they cant just store so they are decelntralication sotrage system
+
+adn other than the main node which stores the data every other nodes get the copied data to store
