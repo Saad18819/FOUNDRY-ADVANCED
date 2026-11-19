@@ -78,3 +78,5 @@ but like the pinning is local node so u can only access it whenever my computer(
 
 if we are having trouble accessing the file coz of the link and its not general http link so we go through gateway where a middlemen calls that ipfs and fethc the data and then give it to you so  just write this in brwoser
 https://ipfs.io/ipfs/"link"
+
+we generally have to do https coz a lot of browser doesnt accept the ipfs so yeah thats the main reason for now

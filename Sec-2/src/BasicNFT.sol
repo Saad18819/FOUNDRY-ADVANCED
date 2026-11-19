@@ -17,7 +17,7 @@ function mintNFT() public{
 }
 
 function tokenURI(uint256 tokenId) public view override returns(string memory){
-    return """
+    return "ipfs://CID_LINK";
     
 }
 //this function already exist in the ERC721.sol so we just gonna override it coz its marked override over there 
@@ -31,6 +31,6 @@ LEARNINGS
 1. unique nft is a combination of the contract address which basically represents the collection and then the tokenID
 2. URI(Uniform Resource Identifier) identifies the resource by name at the specified location or URL
 3. consdier URI as an api call thats gonna return metadata for the NFT ( u can read more abt in ethereum.org NFT section)
-4. in opensea u can actually see nft and when u do blockchain details which has the contract address and it redirects u to other website which has uri and when u paste that uri link u get the metadata 
+4. in opensea u can actually see nft and when u do blockchain details which has the contract address and it redirects u to other website which has Tokenuri function name and when u paste that uri link u get the metadata 
 
  */
