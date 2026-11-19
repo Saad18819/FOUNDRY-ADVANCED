@@ -14,4 +14,7 @@ contract BasicNftTest is Test{
         deployer = new DeployBasicNft();
 basicNft = deployer.run();
     }
+
+// Lesson 11 part 7
+    function testNameIsCorrect()
 }
