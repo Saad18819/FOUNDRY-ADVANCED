@@ -74,3 +74,7 @@ adn other than the main node which stores the data every other nodes get the cop
 like in ipfs desktop i have uploaded one file and now whenever i need to access it i just have to write in my pc
 ipfs://"the cid link"
 but like the pinning is local node so u can only access it whenever my computer(node) is turned on
+
+
+if we are having trouble accessing the file coz of the link and its not general http link so we go through gateway where a middlemen calls that ipfs and fethc the data and then give it to you so  just write this in brwoser
+https://ipfs.io/ipfs/"link"
