@@ -69,3 +69,8 @@ basically it takes ur data and take all ur bunch of data and hash it in a single
 IPFS cant do smart contract they cant just store so they are decelntralication sotrage system
 
 adn other than the main node which stores the data every other nodes get the copied data to store
+
+
+like in ipfs desktop i have uploaded one file and now whenever i need to access it i just have to write in my pc
+ipfs://"the cid link"
+but like the pinning is local node so u can only access it whenever my computer(node) is turned on
