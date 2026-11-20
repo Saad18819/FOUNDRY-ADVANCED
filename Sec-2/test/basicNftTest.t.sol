@@ -17,9 +17,9 @@ contract BasicNftTest is Test{
     }
 
 
-    function testNameIsCorrect() public{
+    function testNameIsCorrect() public view{
 string memory expectedName = "Dogie";
-string memory actualName = basicNft.name(); // name is a function in the ERC721.sol contract
+string memory actualName = basicNft.name(); // name is a function in the ERC721.sol contract to get the name of the contract
 
 // assert(expectedName == actualName) this is wrong coz u cant compare string bcoz string is an array of bytes and u dont compare array
 // the stuff u can compare is uint256, bool , address bytes 
@@ -30,7 +30,17 @@ assert(keccak256(abi.encodePacked(expectedName)) == keccak256(abi.encodePacked(a
 
     }
 
+
+ // lesson 11 part 7 
+
+function testCanMintAndHaveBalance() public{
+
 }
+
+}
+
+
+
 
 /*
 HOW TO COMPARE TWO STRINGS
