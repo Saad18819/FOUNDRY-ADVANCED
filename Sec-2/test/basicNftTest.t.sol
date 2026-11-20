@@ -43,6 +43,9 @@ keccak256(...): Generates a unique, fixed-size 32-byte hash (bytes32) for each b
 
 == Comparison: While Solidity does not support == on dynamic types like string or bytes, it natively supports == on fixed-size value types like bytes32.
 
+and for all of this the best method is to use chisel (explanation is given below)
+1.chisel
+
 
 
  */
