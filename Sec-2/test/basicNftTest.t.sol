@@ -35,6 +35,8 @@ assert(keccak256(abi.encodePacked(expectedName)) == keccak256(abi.encodePacked(a
 
 function testCanMintAndHaveBalance() public{
 
+
+
 }
 
 }
