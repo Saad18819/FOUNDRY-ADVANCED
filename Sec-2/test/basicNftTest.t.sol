@@ -26,7 +26,7 @@ string memory actualName = basicNft.name() // name is a function in the ERC721.s
 // we use loop generally for comparing the elements of array but this is a tedious task
 // the method is eexplained down below
 
-assert(keccak256(abi.encodePacked(expectedName)))
+assert(keccak256(abi.encodePacked(expectedName)) == keccak256(abi.encodePacked(actualName)));
 
     }
 
