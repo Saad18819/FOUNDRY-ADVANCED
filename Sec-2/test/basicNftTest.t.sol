@@ -39,11 +39,12 @@ assert(keccak256(abi.encodePacked(expectedName)) == keccak256(abi.encodePacked(a
  // lesson 11 part 7 
 
 function testCanMintAndHaveBalance() public{
+
 vm.prank(saad);
 basicNft.mintNFT(PUG);
 
-assert(basicNft.balanceOf(saad)==1);
-assert(keccak256(abi.encodePacked(PUG)) == keccak256(abi.encodePacked(basicNft.tokenURI(0))));
+assert(basicNft.balanceOf(saad)==1);  // balanceOf(address) returns the total count (number) of NFTs owned by that address within that specific ERC-721 contract.
+assert(keccak256(abi.encodePacked(PUG)) == keccak256(abi.encodePacked(basicNft.tokenURI(0)))); 
 
 
 }
