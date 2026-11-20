@@ -22,7 +22,7 @@ string memory expectedName = "Dogie";
 string memory actualName = basicNft.name(); // name is a function in the ERC721.sol contract to get the name of the contract
 
 // assert(expectedName == actualName) this is wrong coz u cant compare string bcoz string is an array of bytes and u dont compare array
-// the stuff u can compare is uint256, bool , address bytes 
+// the stuff u can compare is uint256, bool , address bytes32
 // we use loop generally for comparing the elements of array but this is a tedious task
 // the method is eexplained down below
 
