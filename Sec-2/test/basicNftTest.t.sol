@@ -9,7 +9,7 @@ import {BasicNFT} from "../src/BasicNFT.sol";
 contract BasicNftTest is Test{
 
     DeployBasicNft public deployer;
-    BasicNft public basicNft;
+    BasicNFT public basicNft;
 
     function setUp() public{
         deployer = new DeployBasicNft();
@@ -19,7 +19,7 @@ contract BasicNftTest is Test{
 
     function testNameIsCorrect() public{
 string memory expectedName = "Dogie";
-string memory actualName = basicNft.name() // name is a function in the ERC721.sol contract
+string memory actualName = basicNft.name(); // name is a function in the ERC721.sol contract
 
 // assert(expectedName == actualName) this is wrong coz u cant compare string bcoz string is an array of bytes and u dont compare array
 // the stuff u can compare is uint256, bool , address bytes 
