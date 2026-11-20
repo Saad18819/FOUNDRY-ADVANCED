@@ -11,6 +11,11 @@ contract BasicNftTest is Test{
     DeployBasicNft public deployer;
     BasicNFT public basicNft;
 
+    address public saad = makeAddr("Saad");
+    string public constant PUG = "ipfs://bafybeig37i6ir76s7mg5oobetncojcm3c3hxasyd4rvid4jqhy4gkaheg4/?filename=0-PUG.json";
+// got this url from github repo of the course
+
+
     function setUp() public{
         deployer = new DeployBasicNft();
         basicNft = deployer.run();
@@ -34,7 +39,11 @@ assert(keccak256(abi.encodePacked(expectedName)) == keccak256(abi.encodePacked(a
  // lesson 11 part 7 
 
 function testCanMintAndHaveBalance() public{
+vm.prank(saad);
+basicNft.mintNFT(PUG);
 
+assert(basicNft.balanceOf(saad)==1);
+assert(keccak256(abi.encodePacked(PUG)) == keccak256(abi.encodePacked(basicNft.tokenURI(0))));
 
 
 }
