@@ -2,15 +2,28 @@
 pragma solidity ^0.8.19;
 
 import {Script} from "forge-std/Script.sol";
-import {DevOpsTools} from "foundry-devops/src/DevOpsTools.sol";
+import {DevOpsTools} from "lib/foundry-devops/src/DevOpsTools.sol";
 
 contract MintBasicNft is Script{
 
+string public constant PUG = "ipfs://bafybeig37i6ir76s7mg5oobetncojcm3c3hxasyd4rvid4jqhy4gkaheg4/?filename=0-PUG.json";
+
  function run() external{
-address most
+address mostRecentlyDeployed = DevOpsTools.get_most_recent_deployment("BasicNft",block.chainid);
+mintNftOnContract(mostRecentlyDeployed);
  }
+
 // we will be working with most recently deployed NFT so we will install foundry devops package
 // "forge install Cyfrin/foundry-devops"
+
+function mintNftOnContract(address contractAddress) public{
+    
+vm.startBroadcast();
+BasicNft(contractAddress).mintNft(PUG);
+vm.stopBroadcast();
+
+}
+
 }
 
 
