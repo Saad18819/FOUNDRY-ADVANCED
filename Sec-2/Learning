@@ -51,6 +51,11 @@ Deploy = Create the collection container once at one address (0xABC...).
 Mint = Add a new entry/row inside that container (Token #0, Token #1, Token #2...).
 deploy is like making a house and mint is liking bringin in the new things at home
 
+why do we need etherscan api key???
+Sp basically when u deploy the contract on mainnet or testnet on eterscan it does not upload the code just some hex gibberish so to upload the source code we write the etherscan api key so that foundry automatically upoiad the source code on etherscan as well
+
+
+
 THE ARCHITECTURE:
 
 1.src/BasicNFT.sol (The Blueprint): Writes the core rules—minting an NFT by taking a tokenURI, assigning the next sequential tokenId, and mapping tokenId => tokenURI.
