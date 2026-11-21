@@ -47,3 +47,19 @@ ALSOOO
 
 NFT is just really a token standard just like ERC-20 so we gonna aghain import the openzepplin contract for it and start building on top of it
 
+Deploy = Create the collection container once at one address (0xABC...).
+Mint = Add a new entry/row inside that container (Token #0, Token #1, Token #2...).
+deploy is like making a house and mint is liking bringin in the new things at home
+
+THE ARCHITECTURE:
+
+1.src/BasicNFT.sol (The Blueprint): Writes the core rules—minting an NFT by taking a tokenURI, assigning the next sequential tokenId, and mapping tokenId => tokenURI.
+
+
+2.script/DeployBasicNft.s.sol (The Deployment): Takes that blueprint and puts a live copy of the contract onto a blockchain (Anvil, Sepolia, or Mainnet).
+
+
+3.test/BasicNftTest.t.sol (The Verification): Runs automated checks on a local simulated chain to verify that deploying, minting, and reading tokenURI all behave as expected without bugs.
+
+4.script/Interactions.s.sol (The Remote Control): Doesn't deploy the contract—it interacts with (calls functions on) the already-deployed latest contract (like calling mintNft) on a local node, a live testnet like Sepolia, or Mainnet.
+

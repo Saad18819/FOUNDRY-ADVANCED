@@ -36,4 +36,28 @@ LEARNINGS
 3. consdier URI as an api call thats gonna return metadata for the NFT ( u can read more abt in ethereum.org NFT section)
 4. in opensea u can actually see nft and when u do blockchain details which has the contract address and it redirects u to other website which has Tokenuri function name and when u paste that uri link u get the metadata 
 
+
+
+You don't get a tokenURI from minting—you prepare the tokenURI first, and then pass it into the contract during minting so the blockchain knows what that NFT represents.
+
+Think of the NFT like a physical parcel:
+
+The Image (pug.png): The actual item inside the box. You upload this to IPFS first and get an image link.
+
+The Metadata JSON (0-PUG.json): The shipping manifest describing the item (name, description, attributes, and the image link). You upload this JSON file to IPFS next—and that IPFS link is your tokenURI.
+
+Minting (mintNft(PUG)): Creating the official ownership receipt on the blockchain and attaching that tokenURI label to Token ID #0.
+
+
+
+this is the actual method:
+
+Upload Image to IPFS -> Get the image URI (ipfs://.../pug.png).
+Create & Upload Metadata JSON to IPFS -> Put that image URI inside a .json file (along with the name, description, and traits), 
+upload the JSON to IPFS, and get the metadata URI.
+This link is your tokenURI.
+Deploy the Contract (DeployBasicNft.s.sol) Puts the empty->  NFT collection contract onto the blockchain (no tokenURI needed yet).
+Mint the NFT (Interactions.s.sol) -> Calls mintNft(tokenURI) on that deployed contract to create Token ID #0 and permanently link it to that tokenURI.
+
+
  */
