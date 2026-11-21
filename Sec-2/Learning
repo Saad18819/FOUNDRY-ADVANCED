@@ -54,6 +54,7 @@ deploy is like making a house and mint is liking bringin in the new things at ho
 why do we need etherscan api key???
 Sp basically when u deploy the contract on mainnet or testnet on eterscan it does not upload the code just some hex gibberish so to upload the source code we write the etherscan api key so that foundry automatically upoiad the source code on etherscan as well
 
+// lesson 11 part 9
 
 
 THE ARCHITECTURE:
