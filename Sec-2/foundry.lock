@@ -2,6 +2,12 @@
   "../Sec-1Prac/lib/openzeppelin-contracts": {
     "rev": "dbb6104ce834628e473d2173bbc9d47f81a9eec3"
   },
+  "lib/foundry-devops": {
+    "tag": {
+      "name": "0.4.0",
+      "rev": "efff097a87e70c3d15661c9f2a2daeae0b33d5d5"
+    }
+  },
   "lib/openzeppelin-contracts": {
     "tag": {
       "name": "v5.7.0",

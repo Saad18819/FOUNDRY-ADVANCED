@@ -4,3 +4,6 @@
 [submodule "Sec-2/lib/openzeppelin-contracts"]
 	path = Sec-2/lib/openzeppelin-contracts
 	url = https://github.com/OpenZeppelin/openzeppelin-contracts
+[submodule "Sec-2/lib/foundry-devops"]
+	path = Sec-2/lib/foundry-devops
+	url = https://github.com/Cyfrin/foundry-devops
