@@ -1,7 +1,8 @@
 1. forge init
 2. go to openzepplin contract github (contract< token< ERC721) can refer then erc721.sol for the functionalities on which we gonna build
 3. forge install OpenZeppelin/openzeppelin-contracts  (basically u got this link from github ka url se u just copy paste the stuff)
-4. foundry.toml remappings 
+4. 
+5. foundry.toml remappings 
 and also  " fs_permissions = [{ access = "read", path = "./broadcast" }] "
 coz Foundry blocks scripts from reading or writing files on your computer unless you allow it. if You haven't given permission for broadcast/, so Foundry stopped the script. 
 
@@ -13,6 +14,6 @@ make sure in .env file the name u write of varibale is same as in makeFile else 
 6. make deploy ARGS="--network sepolia"   ( it will deploy ur contract on the sepolia testnet)
 
 7.  make mint ARGS="--network sepolia"  (ok so now it mints the nft and it will exist on sepolia blockchain for metamask to hold it u have to import nft in it)
-8. 
+8. and tadaaa u depolyed and minted the nft now go to etherscan sepolia take the contract address and in metamask import NFT 
 
 
