@@ -57,6 +57,9 @@ Sp basically when u deploy the contract on mainnet or testnet on eterscan it doe
 
 
 
+
+
+
 THE ARCHITECTURE:
 
 1.src/BasicNFT.sol (The Blueprint): Writes the core rules—minting an NFT by taking a tokenURI, assigning the next sequential tokenId, and mapping tokenId => tokenURI.
