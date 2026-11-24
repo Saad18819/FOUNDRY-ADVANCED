@@ -14,6 +14,6 @@ make sure in .env file the name u write of varibale is same as in makeFile else 
 6. make deploy ARGS="--network sepolia"   ( it will deploy ur contract on the sepolia testnet)
 
 7.  make mint ARGS="--network sepolia"  (ok so now it mints the nft and it will exist on sepolia blockchain for metamask to hold it u have to import nft in it)
-8. and tadaaa u depolyed and minted the nft now go to etherscan sepolia take the contract address and in metamask import NFT 
+8. and tadaaa u depolyed the contract and minted the nft now go to etherscan sepolia take the contract address and in metamask import NFT 
 
 
