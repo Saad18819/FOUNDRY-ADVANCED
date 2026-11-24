@@ -11,6 +11,8 @@ FOR DEPLOYMENT ON SEPOLIA TESTNET(first write in .sol and then script file and t
 make sure in .env file the name u write of varibale is same as in makeFile else u would get error
 
 6. make deploy ARGS="--network sepolia"   ( it will deploy ur contract on the sepolia testnet)
-7. 
+
+7.  make mint ARGS="--network sepolia"  (ok so now it mints the nft and it will exist on sepolia blockchain for metamask to hold it u have to import nft in it)
+8. 
 
 
