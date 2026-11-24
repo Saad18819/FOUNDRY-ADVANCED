@@ -10,7 +10,7 @@ contract MintBasicNft is Script{
 string public constant PUG = "ipfs://bafybeig37i6ir76s7mg5oobetncojcm3c3hxasyd4rvid4jqhy4gkaheg4/?filename=0-PUG.json";
 
  function run() external{
-address mostRecentlyDeployed = DevOpsTools.get_most_recent_deployment("BasicNft",block.chainid);
+address mostRecentlyDeployed = DevOpsTools.get_most_recent_deployment("BasicNFT",block.chainid);
 mintNftOnContract(mostRecentlyDeployed);
  }
 
@@ -20,7 +20,7 @@ mintNftOnContract(mostRecentlyDeployed);
 function mintNftOnContract(address contractAddress) public{
 
 vm.startBroadcast();
-BasicNft(contractAddress).mintNft(PUG);
+BasicNFT(contractAddress).mintNFT(PUG);
 vm.stopBroadcast();
 
 }
