@@ -52,9 +52,9 @@ Mint = Add a new entry/row inside that container (Token #0, Token #1, Token #2..
 deploy is like making a house and mint is liking bringin in the new things at home
 
 why do we need etherscan api key???
-Sp basically when u deploy the contract on mainnet or testnet on eterscan it does not upload the code just some hex gibberish so to upload the source code we write the etherscan api key so that foundry automatically upoiad the source code on etherscan as well
+Sp basically when u deploy the contract on mainnet or testnet on eterscan it does not upload the code just some hex gibberish so to upload the source code we write the etherscan api key so that foundry automatically upoiad the source code on etherscan as well (and its not necessary but then the make stuff u using go to makefile and check they have put the code of --verify --ertherscan-api-key $(ETHERSCAN_API_KEY)) so u gotta put it 
 
-// lesson 11 part 9
+
 
 
 THE ARCHITECTURE:
