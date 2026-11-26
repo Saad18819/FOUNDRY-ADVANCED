@@ -127,7 +127,34 @@ If you pin it via Pinata and stop paying (or Pinata shuts down), and nobody else
 While anyone with a local backup can re-pin it to restore the exact same CID, it still relies on off-chain storage hardware staying online. (This is why protocols like Filecoin and Arweave were invented—to add economic incentives to decentralized storage.)
 
 
+
+
+The Top Tier: 100% On-Chain SVGs (SVG >)
+
+
+
+
+How it works: Instead of pointing to any external link (https:// or ipfs://), you write the image itself as SVG (Scalable Vector Graphics) XML code directly inside your Solidity smart contract, Base64-encode the SVG and JSON metadata on the fly, and return a data:application/json;base64,... string from tokenURI().
+
+Why it is the gold standard:
+
+Every single pixel/vector instruction lives directly inside Ethereum's state storage.
+
+There are zero external dependencies—no AWS servers, no Pinata accounts, no IPFS gateways, and no pinning fees.
+
+As long as the Ethereum blockchain exists, your NFT's image and metadata are guaranteed to exist and render identically forever.
+
+The Trade-off: Storing raw data on Ethereum is expensive (high gas costs during deployment), and complex high-resolution artwork or videos cannot practically fit in SVG format—which is why on-chain SVGs are usually reserved for generative vector art, dynamic NFTs (like MoodNFT in the next part of Lesson 11), or DeFi position receipts (like Uniswap v3 LP NFTs).
+
+
+
+
+
+
 SVG 
+
+
+
 now i have written the code abt SVG in image section but the thing is that code is SVG and we need TokenURI not svg in the contract to deploy it on chain
 
 so process is 
