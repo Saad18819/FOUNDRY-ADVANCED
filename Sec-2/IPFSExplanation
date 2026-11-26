@@ -133,7 +133,7 @@ now i have written the code abt SVG in image section but the thing is that code 
 so process is 
 in terminal write
 
-1.base64 -i example.svg
+1.base64 -i example.svg (this actuall converts character into 4 base64 string)
 
 u will get the big string type thing
 " PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcuLzIwMDAvc3ZnIiB3aWR0aD0iNTAwIiBoZWln
@@ -150,6 +150,13 @@ cm93c2VyIGRlY29kZWQgdGhpcyA8L3RleHQ+DQo8L3N2Zz4NCg==
 
 now when u copy that above stuff and paste it in ur browser u will get the same svg which u saw in preview
 so basically this thing actually converted ur SVG into some type of string stuff
+
+data:image/svg+xml;base64, 
+the above stuff tells the browser's parser two things:  
+ data:image/svg+xml — Interpret the payload as an SVG image.;
+ base64, — Decode the following string from Base64 first.
+
+
 
 so now i am gonna go to github repo and copy the svg and will paste it in images< happy.svg and in terminal first gonna go to img part and then gonna write
 
