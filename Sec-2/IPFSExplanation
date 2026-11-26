@@ -151,7 +151,20 @@ cm93c2VyIGRlY29kZWQgdGhpcyA8L3RleHQ+DQo8L3N2Zz4NCg==
 now when u copy that above stuff and paste it in ur browser u will get the same svg which u saw in preview
 so basically this thing actually converted ur SVG into some type of string stuff
 
+so now i am gonna go to github repo and copy the svg and will paste it in images< happy.svg and in terminal first gonna go to img part and then gonna write
 
+1.base64 -i happy.svg
+2.
+
+
+data:image/svg+xml;base64,
+PHN2ZyB2aWV3Qm94PSIwIDAgMjAwIDIwMCIgd2lkdGg9IjQwMCIgIGhlaWdodD0iNDAwIiB4bWxu
+cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KICA8Y2lyY2xlIGN4PSIxMDAiIGN5PSIx
+MDAiIGZpbGw9InllbGxvdyIgcj0iNzgiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMyIv
+Pg0KICA8ZyBjbGFzcz0iZXllcyI+DQogICAgPGNpcmNsZSBjeD0iNzAiIGN5PSI4MiIgcj0iMTIi
+Lz4NCiAgICA8Y2lyY2xlIGN4PSIxMjciIGN5PSI4MiIgcj0iMTIiLz4NCiAgPC9nPg0KICA8cGF0
+aCBkPSJtMTM2LjgxIDExNi41M2MuNjkgMjYuMTctNjQuMTEgNDItODEuNTItLjczIiBzdHlsZT0i
+ZmlsbDpub25lOyBzdHJva2U6IGJsYWNrOyBzdHJva2Utd2lkdGg6IDM7Ii8+DQo8L3N2Zz4=
 
 
 
