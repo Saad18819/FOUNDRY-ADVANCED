@@ -94,3 +94,36 @@ just the issue with ipds node is that like if u hold the ipfs and even pinned it
 
 some of the pinned sevices are 
 1.pinata(so when u upload the files they pin ur data so ike even ur node goes down someone elses node is still active )
+
+
+
+
+
+the issue with IPFS VS HTTPS (THE SOLUTION IS ON CHAIN SVGS)
+
+
+The Bottom Tier: HTTPS (>>>>>>> HTTPS)
+
+How it works: The tokenURI in your smart contract points to a traditional centralized server (like AWS, Google Cloud, or a project's private API: [https://api.coolcats.com/1](https://api.coolcats.com/1)).
+
+The Issue (Rug-pull & Link Rot): 
+Whoever owns that server or domain can change the image at any time (turning a rare NFT into a blank square), forget to renew the domain, or shut the company down. Once the server goes offline, the NFT's metadata is gone forever.
+
+
+
+
+The Middle Tier: IPFS
+
+How it works: Instead of a server location, the tokenURI stores a cryptographic hash (ipfs://Qm...) of your JSON metadata and image.
+
+Why it beats HTTPS: It is immutable (content-addressed). Nobody can silently swap the image behind that hash without changing the hash itself—and since the hash is locked in the smart contract, the artwork cannot be tampered with.
+
+The Catch (Patrick's main point in this video): IPFS is not a blockchain, and it has no built-in financial incentive to keep storing your files.
+
+For an IPFS file to stay accessible, at least one IPFS node in the world has to keep it "pinned" on their hard drive.
+
+If you pin it via Pinata and stop paying (or Pinata shuts down), and nobody else on the network has pinned your specific CID, your file gets garbage-collected and disappears from the network.
+
+While anyone with a local backup can re-pin it to restore the exact same CID, it still relies on off-chain storage hardware staying online. (This is why protocols like Filecoin and Arweave were invented—to add economic incentives to decentralized storage.)
+
+
