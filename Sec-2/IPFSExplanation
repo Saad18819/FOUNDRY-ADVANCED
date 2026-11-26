@@ -89,3 +89,8 @@ HTTPS: Relies on one specific server/domain staying alive forever.
 Pinning: Keeps a file saved on at least one computer (like Pinata's servers or your PC) so the network can find it.
 
 IPFS: Isn't on the blockchain, and isn't a single website. Even if every pinning service dies, as long as you save a backup of the image on your hard drive, you can always revive the exact same ipfs:// link later
+
+just the issue with ipds node is that like if u hold the ipfs and even pinned it but then if ur node goes offline then no one can acces it but then the advantage of ipfs is that other nodes or computer can pin  
+
+some of the pinned sevices are 
+1.pinata(so when u upload the files they pin ur data so ike even ur node goes down someone elses node is still active )
