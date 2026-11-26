@@ -127,3 +127,31 @@ If you pin it via Pinata and stop paying (or Pinata shuts down), and nobody else
 While anyone with a local backup can re-pin it to restore the exact same CID, it still relies on off-chain storage hardware staying online. (This is why protocols like Filecoin and Arweave were invented—to add economic incentives to decentralized storage.)
 
 
+SVG 
+now i have written the code abt SVG in image section but the thing is that code is SVG and we need TokenURI not svg in the contract to deploy it on chain
+
+so process is 
+in terminal write
+
+1.base64 -i example.svg
+
+u will get the big string type thing
+" PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcuLzIwMDAvc3ZnIiB3aWR0aD0iNTAwIiBoZWln
+aHQ9IjUwMCI+DQogIDx0ZXh0IHg9IjAiIHk9IjE1IiBmaWxsPSIjYzI2MjYyIj4gaGkhIFlvdSBi
+cm93c2VyIGRlY29kZWQgdGhpcyA8L3RleHQ+DQo8L3N2Zz4NCg== "
+
+now what u can actually do is some manipulation with this string type shit
+
+data:image/svg+xml;base64,
+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcuLzIwMDAvc3ZnIiB3aWR0aD0iNTAwIiBoZWln
+aHQ9IjUwMCI+DQogIDx0ZXh0IHg9IjAiIHk9IjE1IiBmaWxsPSIjYzI2MjYyIj4gaGkhIFlvdSBi
+cm93c2VyIGRlY29kZWQgdGhpcyA8L3RleHQ+DQo8L3N2Zz4NCg==
+
+
+now when u copy that above stuff and paste it in ur browser u will get the same svg which u saw in preview
+so basically this thing actually converted ur SVG into some type of string stuff
+
+
+
+
+
